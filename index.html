@@ -99,7 +99,7 @@
                         <h1 class="h1-large">Team management mobile application</h1>
                         <p class="p-large">Start getting things done together with your team based on Pavo's revolutionary team management features</p>
                         <a class="btn-solid-lg" href="#your-link"><i class="fab fa-apple"></i>Download</a>
-                        <a class="btn-solid-lg secondary" href="#your-link"><i class="fab fa-google-play"></i>Download</a>
+						<a class="btn-solid-lg secondary" onclick="customPlugin.command('WebChat.open', getAdvancedConfig());"><i class="fab"></i>Start chat</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
@@ -665,6 +665,94 @@
         </div> <!-- end of container -->
     </div> <!-- end of copyright --> 
     <!-- end of copyright -->
+	
+	<!-- PureCloud -->
+	
+	<script src="https://apps.mypurecloud.de/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.de/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
+
+<script>
+  window._genesys = {
+    "widgets": {
+      "webchat": {
+        "transport": {
+          "type": "purecloud-v2-sockets",
+          "dataURL": "https://api.mypurecloud.de",
+          "deploymentKey": "0886bd32-00cf-4527-8949-62bf81384d68",
+          "orgGuid": "7f3f503f-14db-42ad-872b-d370ef099907",
+          "interactionData": {
+            "routing": {
+              "targetType": "QUEUE",
+              "targetAddress": "",
+              "priority": 2
+            }
+          }
+        },
+        "userData": {
+          "addressStreet": "",
+          "addressCity": "",
+          "addressPostalCode": "",
+          "addressState": "",
+          "phoneNumber": "",
+          "customField1Label": "",
+          "customField1": "",
+          "customField2Label": "",
+          "customField2": "",
+          "customField3Label": "",
+          "customField3": ""
+        }
+      }
+    }
+  };
+
+  function getAdvancedConfig() {
+    return {
+      "form": {
+        "autoSubmit": false,
+        "firstname": "",
+        "lastname": "",
+        "email": "",
+        "subject": ""
+      },
+      "formJSON": {
+        "wrapper": "<table></table>",
+        "inputs": [
+          {
+            "id": "cx_webchat_form_firstname",
+            "name": "firstname",
+            "maxlength": "100",
+            "placeholder": "Required",
+            "label": "First Name"
+          },
+          {
+            "id": "cx_webchat_form_lastname",
+            "name": "lastname",
+            "maxlength": "100",
+            "placeholder": "Required",
+            "label": "Last Name"
+          },
+          {
+            "id": "cx_webchat_form_email",
+            "name": "email",
+            "maxlength": "100",
+            "placeholder": "Optional",
+            "label": "Email"
+          },
+          {
+            "id": "cx_webchat_form_subject",
+            "name": "subject",
+            "maxlength": "100",
+            "placeholder": "Optional",
+            "label": "Subject"
+          }
+        ]
+      }
+    };
+  }
+
+  const customPlugin = CXBus.registerPlugin('Custom');
+</script>
+
+
     
     	
     <!-- Scripts -->
