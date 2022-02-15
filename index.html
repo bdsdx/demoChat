@@ -883,23 +883,18 @@
 
 <!-- Genesys custom messenger -->
 
-<script type="text/javascript">
-  function toggleMessenger(){
-  Genesys("subscribe", "Launcher.ready" , function(o){
-    console.log("The queue works!");
-  });
-  }
-</script>
-
 <!-- simple call -->
 <script type="text/javascript">
     function toggleMessenger(){
-      Genesys("command", "Messenger.open", {},
-        function(o){},  // if resolved
-        function(o){    // if rejected
-          Genesys("command", "Messenger.close");
-        }
-      );
+        Genesys("command", "Database.set", {
+            messaging: {
+              customAttributes: {
+                department: "sales",
+                property_type: "apartment",
+                device: "mobile"
+              }
+            }
+          });
     }
   </script>
 
