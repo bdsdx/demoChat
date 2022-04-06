@@ -702,7 +702,20 @@
       );
     }
   </script>
-  <!-- Open messenger -->
+<!-- Open messenger -->
+
+<!-- Show Launcher -->
+<script type="text/javascript">
+    function openMessenger(){
+      Genesys("command", "Launcher.show", {},
+        function(o){},  // if resolved
+        function(o){    // if rejected
+          Genesys("command", "Launcher.hide");
+        }
+      );
+    }
+  </script>
+<!-- Show Launcher -->
 
 <!-- Genesys custom messenger end-->
    	
