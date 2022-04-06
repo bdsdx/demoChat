@@ -99,7 +99,7 @@
                         <h1 class="h1-large">A demo page to test chat</h1>
                         <p class="p-large">You can the Messenger version</p>
                         <button id="custom-window" class="btn-solid-reg popup-with-move-anim" onclick="openMessenger()">Show the Messenger window</button>
-                        <button id="custom-launcher" class="btn-solid-reg popup-with-move-anim" onclick="toggleMessenger()">Show launcher</button>
+                        <button id="custom-launcher" class="btn-solid-reg popup-with-move-anim" onclick="showLauncher()">Show launcher</button>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
@@ -706,7 +706,7 @@
 
 <!-- Show Launcher -->
 <script type="text/javascript">
-    function openMessenger(){
+    function showLauncher(){
       Genesys("command", "Launcher.show", {},
         function(o){},  // if resolved
         function(o){    // if rejected
