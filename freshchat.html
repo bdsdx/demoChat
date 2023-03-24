@@ -681,8 +681,20 @@
 
 
 <!-- FD -->
-
-<script> (function (d, w, c) { if(!d.getElementById("spd-busns-spt")) { var n = d.getElementsByTagName('script')[0], s = d.createElement('script'); var loaded = false; s.id = "spd-busns-spt"; s.async = "async"; s.setAttribute("data-self-init", "false"); s.setAttribute("data-init-type", "opt"); s.src = 'https://cdn.euc-freshbots.ai/assets/share/js/freshbots.min.js'; s.setAttribute("data-client", "78ba95c4375897b2f8ea2fcf16f3c944c3219733"); s.setAttribute("data-bot-hash", "8faa8c64e24dc561f4400e9b691f6241c9dabb76"); s.setAttribute("data-env", "prod"); s.setAttribute("data-region", "euc"); if (c) { s.onreadystatechange = s.onload = function () { if (!loaded) { c(); } loaded = true; }; } n.parentNode.insertBefore(s, n); } }) (document, window, function () { Freshbots.initiateWidget({ autoInitChat: false, getClientParams: function () { return {"cstmr::lng":"fr"}; } }, function(successResponse) { }, function(errorResponse) { }); }); </script>
+<script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      	 token: "1176fe46-9b73-4343-8ee8-c098e35d313c",
+	 host: "https://socarede.freshchat.com"
+    });
+  }
+  function initialize(i,t){var e;i.getElementById(t)?
+  initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,
+  e.src="https://socarede.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}
+  function initiateCall(){initialize(document,"Freshchat-js-sdk")}
+  window.addEventListener?window.addEventListener("load",initiateCall,!1):
+  window.attachEvent("load",initiateCall,!1);
+</script>
 <!-- FD -->
 
     
