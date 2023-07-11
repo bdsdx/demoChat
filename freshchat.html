@@ -682,20 +682,12 @@
 
 <!-- FD -->
 <script>
-  function initFreshChat() {
-    window.fcWidget.init({
-      	 token: "1176fe46-9b73-4343-8ee8-c098e35d313c",
-	 host: "https://socarede.freshchat.com",
-	 widgetUuid: "f4ae58b7-cc85-4a7f-88dd-58030d822ffd"
-    });
-  }
-  function initialize(i,t){var e;i.getElementById(t)?
-  initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,
-  e.src="https://socarede.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}
-  function initiateCall(){initialize(document,"Freshchat-js-sdk")}
-  window.addEventListener?window.addEventListener("load",initiateCall,!1):
-  window.attachEvent("load",initiateCall,!1);
+	window.fwSettings={
+	'widget_id':80000009510
+	};
+	!function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
 </script>
+<script type='text/javascript' src='https://euc-widget.freshworks.com/widgets/80000009510.js' async defer></script>
 <!-- FD -->
 
     
