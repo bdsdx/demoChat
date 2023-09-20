@@ -29,11 +29,29 @@
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 	
+	
+	<style>
+div.fixedChat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+</style>
+	
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
+	
+	
+	
 </head>
+
+
 <body data-spy="scroll" data-target=".fixed-top" onload="toggleMessenger()">
     
+	<div class="fixedChat">
+	<img src="images/startConversation.png" id="custom-launcher" role="button" onclick="toggleMessenger()" width="56" height="56">
+	</div>
+	
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-light">
         <div class="container">
@@ -101,7 +119,7 @@
                         <button id="custom-window" class="btn-solid-reg popup-with-move-anim" onclick="openMessenger()">Show the Messenger window</button>
                         <!-- <button id="custom-launcher" class="btn-solid-reg popup-with-move-anim" onclick="showLauncher()">Show launcher</button> -->
 						<button type="button" class="btn-solid-reg popup-with-move-anim" id="custom-launcher-2" style="display: none;" onclick="toggleMessenger()">Custom Launcher Button</button>
-						<img src="images/startConversation.png" id="custom-launcher" onclick="toggleMessenger()">
+						
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
