@@ -100,8 +100,8 @@
                         <p class="p-large">You can the Messenger version</p>
                         <button id="custom-window" class="btn-solid-reg popup-with-move-anim" onclick="openMessenger()">Show the Messenger window</button>
                         <!-- <button id="custom-launcher" class="btn-solid-reg popup-with-move-anim" onclick="showLauncher()">Show launcher</button> -->
-						<button type="button" class="btn-solid-reg popup-with-move-anim" id="custom-launcher-2" style="display: none;" onclick="toggleMessenger()">Custom Launcher Button</button>
-						<img src="images/startConversation.png" id="custom-launcher" onclick="toggleMessenger()">
+						<button type="button" class="btn-solid-reg popup-with-move-anim" id="custom-launcher" style="display: none;" onclick="toggleMessenger()">Custom Launcher Button</button>
+						<img src="images/startConversation.png" onclick="toggleMessenger()">
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
